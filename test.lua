@@ -1,5 +1,5 @@
 print("--- ONEX CLOUD EXECUTION SUCCESSFUL ---")
-warn("User: " .. me.Name)
+warn("User: " .. tostring(me))
 local p = Instance.new("Part")
 p.Parent = workspace
 p.Position = me.Character.Head.Position + Vector3.new(0, 5, 0)
