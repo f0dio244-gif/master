@@ -1,9 +1,12 @@
-print("--- ONEX CLOUD EXECUTION SUCCESSFUL ---")
-warn("User: " .. tostring(me))
+print("--- ONEX CLOUD SUCCESS ---")
+local char = me.Character or me.CharacterAdded:Wait()
+local head = char:WaitForChild("Head")
+
 local p = Instance.new("Part")
+p.Size = Vector3.new(5, 5, 5)
+p.Position = head.Position + Vector3.new(0, 10, 0)
+p.BrickColor = BrickColor.new("Electric blue")
 p.Parent = workspace
-p.Position = me.Character.Head.Position + Vector3.new(0, 5, 0)
-p.BrickColor = BrickColor.new("Bright green")
-p.Size = Vector3.new(4, 4, 4)
 p.Anchored = true
-print("Created Cloud-Part at: " .. tostring(p.Position))
+
+warn("Cloud script executed for: " .. me.Name)
